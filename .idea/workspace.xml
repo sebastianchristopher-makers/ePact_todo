@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea16fefc-0552-4750-b8f3-7eac0884aff1" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
+      <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oUserDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -15,9 +10,12 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" afterDir="false" />
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
       <change beforePath="$PROJECT_DIR$/target/classes/ToDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/Sql2oToDoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oToDoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/ToDoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/ToDoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/ToDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/ToDo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ToDoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/dao/Sql2oToDoDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/Sql2oToDoDaoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +45,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-<<<<<<< HEAD
-    <property name="project.structure.last.edited" value="Project" />
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -77,13 +71,16 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="JUnit.UserTest">
-    <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-  <component name="RunManager" selected="JUnit.Sql2oToDoDaoTest.canFindFromId">
+  <component name="RunManager" selected="JUnit.All in ePactToDo">
+    <configuration name="All in ePactToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Sql2oToDoDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
       <module name="ePactToDo" />
       <extension name="coverage">
         <pattern>
@@ -98,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sql2oToDoDaoTest.canFindFromId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sql2oUserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
       <extension name="coverage">
         <pattern>
@@ -107,25 +104,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Sql2oToDoDaoTest" />
-      <option name="METHOD_NAME" value="canFindFromId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sql2oToDoDaoTest.canSetId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ePactToDo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Sql2oToDoDaoTest" />
-      <option name="METHOD_NAME" value="canSetId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="dao.Sql2oUserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,11 +119,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
     <configuration name="ToDoTest.checkIDIsSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
       <module name="ePactToDo" />
       <extension name="coverage">
         <pattern>
@@ -152,33 +128,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="models" />
-<<<<<<< HEAD
-      <option name="MAIN_CLASS_NAME" value="models.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
-=======
       <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
       <option name="METHOD_NAME" value="checkIDIsSet" />
       <option name="TEST_OBJECT" value="method" />
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.ToDoTest" />
-        <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
-        <item itemvalue="JUnit.ToDoTest.checkDefaultComplete" />
-        <item itemvalue="JUnit.ToDoTest.addContentToToDo" />
-=======
-        <item itemvalue="JUnit.Sql2oToDoDaoTest.canFindFromId" />
-        <item itemvalue="JUnit.Sql2oToDoDaoTest.canSetId" />
+        <item itemvalue="JUnit.All in ePactToDo" />
         <item itemvalue="JUnit.Sql2oToDoDaoTest" />
-        <item itemvalue="JUnit.ToDoTest" />
-        <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
->>>>>>> 6e8beb640850e405da38eb4a558cb7c0bf90c689
+        <item itemvalue="JUnit.Sql2oUserDaoTest" />
       </list>
     </recent_temporary>
   </component>
