@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -64,4 +65,12 @@ public class ToDoTest {
         assertEquals(1, toDo.getUserId());
     }
 
+
+    @After
+
+    public void tearDown() {
+        toDo = null;
+    }
+
 }
+
