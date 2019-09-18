@@ -2,6 +2,8 @@ package dao;
 import models.ToDo;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
+
+import java.util.Collections;
 import java.util.List;
 import org.sql2o.Sql2oException;
 
@@ -15,16 +17,25 @@ public class Sql2oToDoDao implements ToDoDao {
 
     @Override
     public void edit(int id, String newContent) {
-        System.out.println("Successfully edited");
+        try(Connection con = sql2o.open()){
+            con.createQuery("UPDATE todo SET content = :content WHERE id = :id")
+                    .addParameter("id", id)
+                    .addParameter("content", newContent)
+                    .executeUpdate();
+        } catch (Sql2oException e) {
+            System.out.println(e);
+        }
     }
 
     @Override
     public void delete(int id) {
         try(Connection con = sql2o.open()){
-            con.createQuery("DELETE FROM todo WHERE id = id;")
+            con.createQuery("DELETE FROM todo WHERE id = :id")
+                    .addParameter("id", id)
                     .executeUpdate();
+        } catch(Sql2oException e){
+            System.out.println(e);
         }
-        System.out.println("Successfully deleted");
     }
 
     @Override
@@ -32,6 +43,9 @@ public class Sql2oToDoDao implements ToDoDao {
         try(Connection con = sql2o.open()) {
             return con.createQuery("SELECT * FROM todo;")
                     .executeAndFetch(ToDo.class);
+        } catch(Sql2oException e){
+            System.out.println(e);
+            return Collections.emptyList();
         }
     }
 
@@ -51,7 +65,14 @@ public class Sql2oToDoDao implements ToDoDao {
 
     @Override
     public void complete(int id, boolean isComplete) {
-
+        try(Connection con = sql2o.open()){
+            con.createQuery("UPDATE todo SET complete = :isComplete WHERE id = :id")
+                    .addParameter("isComplete", isComplete)
+                    .addParameter("id", id)
+                    .executeUpdate();
+        } catch(Sql2oException e){
+            System.out.println(e);
+        }
     }
 
     @Override
@@ -63,7 +84,7 @@ public class Sql2oToDoDao implements ToDoDao {
                 .executeAndFetchFirst(ToDo.class);
         } catch(Sql2oException e){
             System.out.println(e);
+            return null;
         }
-        return null;
     }
 }

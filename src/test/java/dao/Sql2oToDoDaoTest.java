@@ -11,8 +11,7 @@ import org.sql2o.Sql2o;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 public class Sql2oToDoDaoTest {
 
@@ -38,7 +37,17 @@ public class Sql2oToDoDaoTest {
     }
 
     @Test
-    public void viewAll() {
+    public void itCanEditAToDo(){
+        ToDo todo = new ToDo ("mow the lawn");
+        String originalToDoContent = todo.getContent();
+        todoDao.add(todo);
+        todoDao.edit(todo.getId(), "I say something else now.");
+        String newToDoContent = todoDao.find(todo.getId()).getContent();
+        assertNotEquals(originalToDoContent, newToDoContent);
+    }
+
+    @Test
+    public void allReturnsAllToDos() {
         conn.createQuery("INSERT INTO todo(content) VALUES (:content)")
                 .addParameter("content", "Buy bread")
                 .executeUpdate();
@@ -57,7 +66,12 @@ public class Sql2oToDoDaoTest {
     }
 
     @Test
-    public void deleteById() {
+    public void allReturnsNothingIfNoToDos(){
+        assertTrue(todoDao.all().isEmpty());
+    }
+
+    @Test
+    public void itCanDeleteAToDoById() {
         conn.createQuery("INSERT INTO todo(content) VALUES (:content)")
                 .addParameter("content", "Buy bread")
                 .executeUpdate();
@@ -70,6 +84,30 @@ public class Sql2oToDoDaoTest {
     public void canFindFromId(){
         todoDao.add(todo);
         assertEquals(todo, todoDao.find(1));
+    }
+
+    @Test
+    public void toDosAreNotCompleteByDefault(){
+        todoDao.add(todo);
+        ToDo foundToDo = todoDao.find(1);
+        assertFalse(foundToDo.getComplete());
+    }
+
+    @Test
+    public void itCanMarkAnItemAsComplete(){
+        todoDao.add(todo);
+        todoDao.complete(1, true);
+        ToDo foundToDo = todoDao.find(1);
+        assertTrue(foundToDo.getComplete());
+    }
+
+    @Test
+    public void itCanMarkAnItemAsIncomplete(){
+        todoDao.add(todo);
+        todoDao.complete(1, true);
+        todoDao.complete(1, false);
+        ToDo foundToDo = todoDao.find(1);
+        assertFalse(foundToDo.getComplete());
     }
 
     @After
