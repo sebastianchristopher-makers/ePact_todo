@@ -16,6 +16,6 @@ public class Sql2oToDoDaoTest {
 
     @After
     public void tearDown() {
-        
+
     }
 }
