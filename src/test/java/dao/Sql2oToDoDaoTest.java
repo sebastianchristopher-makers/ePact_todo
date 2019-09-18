@@ -22,7 +22,7 @@ public class Sql2oToDoDaoTest {
         conn = sql2o.open();
     }
     @Test
-    public void canSetId(){
+    public void addingAToDoSetsId(){
         int ogId = todo.getId();
         todoDao.add(todo);
         int newId = todo.getId();
@@ -34,20 +34,9 @@ public class Sql2oToDoDaoTest {
         todoDao.add(todo);
         assertEquals(todo, todoDao.find(1));
     }
-//    @Test
-//    public void canAddtoDB(){
-//        todoDao.add(todo);
-//        assert
-//    String sql = "INSERT INTO todo(content)" + "VALUES (:todo)";
-//    }
-
-
 
     @After
     public void tearDown() {
-        String sql = "TRUNCATE todo CASCADE;";
-        conn.createQuery(sql).executeUpdate();
-        sql = "ALTER SEQUENCE todo_id_seq RESTART WITH 1;";
-        conn.createQuery(sql).executeUpdate();
+        conn.createQuery("TRUNCATE todo  RESTART IDENTITY CASCADE").executeUpdate();
     }
 }
