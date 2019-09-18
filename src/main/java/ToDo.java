@@ -1,8 +1,8 @@
 public class ToDo {
-    String content;
-    boolean complete;
-    int labelId;
-    int userId;
+    private String content;
+    private boolean complete;
+    private int labelId;
+    private int userId;
 
     public ToDo(String content){
         this.content = content;
