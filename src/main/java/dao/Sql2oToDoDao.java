@@ -35,13 +35,10 @@ public class Sql2oToDoDao implements ToDoDao {
     @Override
     public ToDo find(int id) {
         String sql = "SELECT * FROM todo WHERE id = (:id)";
-        System.out.println("Help");
         try (Connection conn = sql2o.open()) {
-            System.out.println("Please");
            return conn.createQuery(sql)
                 .addParameter("id", id)
                 .executeAndFetchFirst(ToDo.class);
-
         } catch(Sql2oException e){
             System.out.println(e);
         }
