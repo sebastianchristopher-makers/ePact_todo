@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea16fefc-0552-4750-b8f3-7eac0884aff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ToDoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/ToDoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ToDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ToDoTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,12 +30,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="models" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="models" />
     </key>
   </component>
@@ -53,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ToDoTest">
+  <component name="RunManager" selected="JUnit.UserTest">
     <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
       <option name="PACKAGE_NAME" value="models" />
@@ -93,23 +95,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToDoTest.createANewToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="PACKAGE_NAME" value="models" />
-      <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
-      <option name="METHOD_NAME" value="createANewToDo" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="models.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.ToDoTest" />
         <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
         <item itemvalue="JUnit.ToDoTest.checkDefaultComplete" />
         <item itemvalue="JUnit.ToDoTest.addContentToToDo" />
-        <item itemvalue="JUnit.ToDoTest.createANewToDo" />
       </list>
     </recent_temporary>
   </component>
