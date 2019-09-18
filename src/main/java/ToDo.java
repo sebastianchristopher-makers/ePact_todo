@@ -1,10 +1,14 @@
 public class ToDo {
     String content;
     boolean complete;
+    int labelId;
+    int userId;
 
     public ToDo(String content){
         this.content = content;
         this.complete = false;
+        this.labelId = 0;
+        this.userId = 0;
     }
     public void setContent(String newContent){
         this.content = newContent;
@@ -19,5 +23,19 @@ public class ToDo {
 
     public boolean getComplete() {
         return this.complete;
+    }
+
+    public void setLabelId(int newLabelId){
+        this.labelId = newLabelId;
+    }
+    public int getLabelId() {
+        return this.labelId;
+    }
+
+    public void setUserId(int newUserId){
+        this.userId = newUserId;
+    }
+    public int getUserId() {
+        return this.userId;
     }
 }
