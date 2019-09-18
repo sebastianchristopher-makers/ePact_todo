@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea16fefc-0552-4750-b8f3-7eac0884aff1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06bb78752af9219c243a8e3f6e0e9610b786273e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8eba60e78851df53a2a363039f7260a587637ecd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java.orig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oUserDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oUserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/models/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/dao/Sql2oUserDaoTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/models/UserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ToDo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/Sql2oToDoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oToDoDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/ToDoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/ToDoDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/ToDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/ToDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ToDoTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/dao/Sql2oToDoDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/dao/Sql2oToDoDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/ToDoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/models/ToDoTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
