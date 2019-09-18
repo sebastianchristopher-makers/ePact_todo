@@ -9,5 +9,6 @@
         <module name="ePactToDo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="10" />
   </component>
 </project>
