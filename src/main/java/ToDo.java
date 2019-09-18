@@ -1,5 +1,6 @@
 public class ToDo {
-  
+
+    private int id;
     private String content;
     private boolean complete;
     private int labelId;

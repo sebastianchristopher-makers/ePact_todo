@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea16fefc-0552-4750-b8f3-7eac0884aff1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ToDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ToDoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ToDoTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +19,11 @@
   </component>
   <component name="ProjectId" id="1R0Ohkw0nlRdtPRODDlsu7tDmVQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -27,7 +36,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ToDoTest.checkIDIsSet">
+  <component name="RunManager" selected="JUnit.ToDoTest">
     <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,9 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ToDoTest" />
         <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
         <item itemvalue="JUnit.ToDoTest.checkDefaultComplete" />
-        <item itemvalue="JUnit.ToDoTest" />
         <item itemvalue="JUnit.ToDoTest.addContentToToDo" />
         <item itemvalue="JUnit.ToDoTest.createANewToDo" />
       </list>
@@ -105,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
