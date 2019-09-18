@@ -24,6 +24,22 @@ public class ToDoTest {
         toDo.setContent("Buy Milk");
         assertEquals("Buy Milk", toDo.getContent());
     }
-    
+    @Test
+    public void canSetComplete(){
+        toDo.setComplete(true);
+        assertTrue(toDo.getComplete());
+    }
+
+    @Test
+    public void defaultCompleteIsFalse() {
+        assertFalse(toDo.getComplete());
+    }
+
+    @Test
+    public void canSetNotComplete(){
+        toDo.setComplete(true);
+        toDo.setComplete(false);
+        assertFalse(toDo.getComplete());
+    }
 
 }
