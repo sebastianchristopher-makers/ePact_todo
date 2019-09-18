@@ -27,6 +27,66 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.ToDoTest.checkIDIsSet">
+    <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToDoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToDoTest.addContentToToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToDoTest" />
+      <option name="METHOD_NAME" value="addContentToToDo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToDoTest.checkDefaultComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToDoTest" />
+      <option name="METHOD_NAME" value="checkDefaultComplete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToDoTest.checkIDIsSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToDoTest" />
+      <option name="METHOD_NAME" value="checkIDIsSet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToDoTest.createANewToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ToDoTest" />
+      <option name="METHOD_NAME" value="createANewToDo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
+        <item itemvalue="JUnit.ToDoTest.checkDefaultComplete" />
+        <item itemvalue="JUnit.ToDoTest" />
+        <item itemvalue="JUnit.ToDoTest.addContentToToDo" />
+        <item itemvalue="JUnit.ToDoTest.createANewToDo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>

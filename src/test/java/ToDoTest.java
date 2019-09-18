@@ -2,16 +2,26 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.not;
 import static org.junit.Assert.*;
-
+import static org.hamcrest.Matchers.*;
 
 public class ToDoTest {
     ToDo toDo;
 
     @Before
-    public void setUpToDo(){
-        toDo = new ToDo("Pet dog");
+    public void setUp() {
+       toDo = new ToDo("Buy Milk");
+    }
+
+    @Test
+    public void instantiatesWithContent() {
+        assertFalse(toDo.getContent().isEmpty());
+    }
+
+    @Test
+    public void checkIDIsSet() {
+        toDo.setId(1);
+        assertEquals(1, toDo.getId());
     }
 
     @Test
@@ -44,7 +54,7 @@ public class ToDoTest {
     }
 
     @Test
-    public void defaultLabelIdis0() {
+    public void defaultLabelIdIs0() {
         assertEquals(0 ,toDo.getLabelId());
     }
 
@@ -55,7 +65,7 @@ public class ToDoTest {
     }
 
     @Test
-    public void defaultUserIdis0() {
+    public void defaultUserIdIs0() {
         assertEquals(0 ,toDo.getUserId());
     }
 
@@ -65,12 +75,9 @@ public class ToDoTest {
         assertEquals(1, toDo.getUserId());
     }
 
-
     @After
-
     public void tearDown() {
         toDo = null;
     }
 
 }
-
