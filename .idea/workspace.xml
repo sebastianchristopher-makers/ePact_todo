@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea16fefc-0552-4750-b8f3-7eac0884aff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java.orig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/ePactToDo.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/Sql2oToDoDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/ToDoDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/models/ToDo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/ePactToDo.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/dao/Sql2oToDoDaoTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/models/ToDoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ToDoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/ToDoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oToDoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ToDoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ToDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oToDoDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ToDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ToDoTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +37,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1R0Ohkw0nlRdtPRODDlsu7tDmVQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -53,32 +74,59 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ToDoTest">
-    <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.Sql2oToDoDaoTest.canFindFromId">
+    <configuration name="Sql2oToDoDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
-      <option name="PACKAGE_NAME" value="models" />
-      <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Sql2oToDoDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToDoTest.addContentToToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sql2oToDoDaoTest.canFindFromId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
-      <option name="PACKAGE_NAME" value="models" />
-      <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
-      <option name="METHOD_NAME" value="addContentToToDo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Sql2oToDoDaoTest" />
+      <option name="METHOD_NAME" value="canFindFromId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToDoTest.checkDefaultComplete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sql2oToDoDaoTest.canSetId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ePactToDo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Sql2oToDoDaoTest" />
+      <option name="METHOD_NAME" value="canSetId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToDoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ePactToDo" />
       <option name="PACKAGE_NAME" value="models" />
       <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
-      <option name="METHOD_NAME" value="checkDefaultComplete" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,23 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToDoTest.createANewToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ePactToDo" />
-      <option name="PACKAGE_NAME" value="models" />
-      <option name="MAIN_CLASS_NAME" value="models.ToDoTest" />
-      <option name="METHOD_NAME" value="createANewToDo" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Sql2oToDoDaoTest.canFindFromId" />
+        <item itemvalue="JUnit.Sql2oToDoDaoTest.canSetId" />
+        <item itemvalue="JUnit.Sql2oToDoDaoTest" />
         <item itemvalue="JUnit.ToDoTest" />
         <item itemvalue="JUnit.ToDoTest.checkIDIsSet" />
-        <item itemvalue="JUnit.ToDoTest.checkDefaultComplete" />
-        <item itemvalue="JUnit.ToDoTest.addContentToToDo" />
-        <item itemvalue="JUnit.ToDoTest.createANewToDo" />
       </list>
     </recent_temporary>
   </component>
@@ -138,5 +176,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
