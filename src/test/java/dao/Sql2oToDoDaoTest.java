@@ -39,6 +39,9 @@ public class Sql2oToDoDaoTest {
         ToDo toDo2 = new ToDo("Buy milk");
         toDo2.setId(2);
         List<ToDo> list = todoDao.all();
+//        assertEquals(toDo1, list.get(0));
+//        assertEquals(toDo2, list.get(1));
+        System.out.println(list.size());
         assertThat(list, hasItems(toDo1,toDo2));
     }
 
@@ -55,7 +58,7 @@ public class Sql2oToDoDaoTest {
 
     @After
     public void tearDown() {
-        conn.createQuery("TRUNCATE todo CASCADE").executeUpdate();
-        conn.createQuery("ALTER SEQUENCE todo_id_seq RESTART WITH 1").executeUpdate();
+        conn.createQuery("TRUNCATE todo  RESTART IDENTITY CASCADE").executeUpdate();
+//        conn.createQuery("ALTER SEQUENCE id RESTART WITH 1").executeUpdate();
     }
 }
