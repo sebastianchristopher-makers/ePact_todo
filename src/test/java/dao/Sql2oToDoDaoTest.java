@@ -12,12 +12,14 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class Sql2oToDoDaoTest {
 
     private Sql2oToDoDao todoDao;
     private Connection conn;
     ToDo todo;
+
     @Before
     public void setUp(){
         todo = new ToDo("Pet Milk");
@@ -26,6 +28,7 @@ public class Sql2oToDoDaoTest {
         todoDao = new Sql2oToDoDao(sql2o);
         conn = sql2o.open();
     }
+
     @Test
     public void addingAToDoSetsId(){
         int ogId = todo.getId();
@@ -58,12 +61,13 @@ public class Sql2oToDoDaoTest {
         conn.createQuery("INSERT INTO todo(content) VALUES (:content)")
                 .addParameter("content", "Buy bread")
                 .executeUpdate();
-       ToDo toDo = new ToDo("Buy bread!");
-       toDo.setId(1);
-       todoDao.delete(1);
+        ToDo toDo = new ToDo("Buy bread!");
+        toDo.setId(1);
+        todoDao.delete(1);
+    }
 
     @Test
-    public void canFindFromId() {
+    public void canFindFromId(){
         todoDao.add(todo);
         assertEquals(todo, todoDao.find(1));
     }
