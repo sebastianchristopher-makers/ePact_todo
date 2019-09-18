@@ -6,9 +6,6 @@ public class ToDo {
 
     public ToDo(String content){
         this.content = content;
-        this.complete = false;
-        this.labelId = 0;
-        this.userId = 0;
     }
     public void setContent(String newContent){
         this.content = newContent;
