@@ -1,5 +1,8 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class ToDo {
 
     private int id;
@@ -50,5 +53,22 @@ public class ToDo {
   
     public int getUserId() {
         return this.userId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ToDo toDo = (ToDo) o;
+        return id == toDo.id &&
+                complete == toDo.complete &&
+                labelId == toDo.labelId &&
+                userId == toDo.userId &&
+                Objects.equals(content, toDo.content);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, content, complete, labelId, userId);
     }
 }
