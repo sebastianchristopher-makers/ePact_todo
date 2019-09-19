@@ -21,5 +21,15 @@ public class App {
             model.put("todos", todos); // pass all ToDos into template
             return new ModelAndView(model, "index.vtl");
         }, new VelocityTemplateEngine());
+
+        get("/todos/:id", (request,response) -> {
+            Map<String, Object> model = new HashMap<>();
+          int id = Integer.parseInt(request.params("id"));
+            System.out.println(id);
+            ToDo todo1 = todoDao.find(id);
+            System.out.println(todo1);
+            model.put("todo",todo1);
+            return new ModelAndView(model, "templates/todofind.vtl");
+        }, new VelocityTemplateEngine());
     }
 }
