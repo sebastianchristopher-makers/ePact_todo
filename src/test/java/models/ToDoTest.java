@@ -12,7 +12,7 @@ public class ToDoTest {
 
     @Before
     public void setUp() {
-       toDo = new ToDo("Buy Milk");
+       toDo = new ToDo("Buy Milk", 1);
     }
 
     @Test

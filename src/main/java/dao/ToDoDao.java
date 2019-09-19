@@ -19,6 +19,7 @@ public interface ToDoDao {
 
     //all
     List<ToDo> all();
+    List<ToDo> findByUser(int userId);
 
     //find
     ToDo find(int id);

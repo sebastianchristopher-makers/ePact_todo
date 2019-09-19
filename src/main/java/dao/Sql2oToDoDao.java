@@ -87,4 +87,17 @@ public class Sql2oToDoDao implements ToDoDao {
             return null;
         }
     }
+
+    @Override
+    public List<ToDo> findByUser(int userId) {
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM todo WHERE userId = :userId")
+                    .addParameter("userId", userId)
+                    .executeAndFetch(ToDo.class);
+        } catch(Sql2oException ex) {
+            System.out.println(ex);
+        }
+        return Collections.emptyList();
+    }
+
 }
