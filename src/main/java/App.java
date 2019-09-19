@@ -10,6 +10,7 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
+        staticFileLocation("/public");
 
         String connectionString = "jdbc:postgresql://localhost:5432/epacttodoapp";
         Sql2o sql2o = new Sql2o(connectionString, "student", "");

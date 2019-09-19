@@ -1,7 +1,26 @@
-<HTML>
-<ul>
-    #foreach( $todo in $todos )
-    <li>$todo.content</li>
-    #end
-</ul>
-</HTML>
+<html>
+<title>List of ToDos</title>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<div class="container">
+    <div id="titlething">Welcome to your ToDo List!</div>
+    <div class="items">
+
+        #foreach( $todo in $todos )
+        <input id="$todo.id" type="checkbox" checked>
+        <label for="$todo.id">$todo.content</label>
+        #end
+
+        <h2 class="done" aria-hidden="true">Done</h2>
+        <h2 class="undone" aria-hidden="true">Not Done</h2>
+    </div>
+</div>
+<div class="buttons" id="buttons">
+    <input type="submit" id="addbutton" value="Add"/>
+    <input type="submit" id="complete" value="Complete"/>
+    <input type="submit" id="findbylabelid" value="Find by Label ID"/>
+</div>
+</html>
+
+
