@@ -65,11 +65,11 @@ public class ToDoTest {
         toDo.setLabelId(1);
         assertEquals(1, toDo.getLabelId());
     }
-
-    @Test
-    public void defaultUserIdIs0() {
-        assertEquals(0 ,toDo.getUserId());
-    }
+//
+//    @Test
+//    public void defaultUserIdIs0() {
+//        assertEquals(0 ,toDo.getUserId());
+//    }
 
     @Test
     public void canSetUserId() {
