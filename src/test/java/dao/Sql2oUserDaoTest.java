@@ -16,7 +16,7 @@ public class Sql2oUserDaoTest {
 
     @Before
     public void setUp() throws Exception {
-        String connectionString = "jdbc:postgresql://localhost:5432/toDoListTest";
+        String connectionString = "jdbc:postgresql://localhost:5432/epacttodoapptest";
         Sql2o sql2o = new Sql2o(connectionString, "student", "");
         userDao = new Sql2oUserDao(sql2o);
         conn = sql2o.open();
