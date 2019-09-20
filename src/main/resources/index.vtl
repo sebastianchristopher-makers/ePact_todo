@@ -9,17 +9,28 @@
     <div class="items">
 
         #foreach( $todo in $todos )
-        <input id="$todo.id" type="checkbox" checked>
+        <div id="$todo.id">
+        <input id="$todo.id" type="checkbox">
         <label for="$todo.id">$todo.content</label>
+        <form action="/todos/$todo.id/delete" method="POST">
+            <input type="submit" id="$todo.id" value="Delete">
+        </form>
+        </div>
         #end
 
         <h2 class="done" aria-hidden="true">Done</h2>
         <h2 class="undone" aria-hidden="true">Not Done</h2>
     </div>
 </div>
-<div class="buttons" id="buttons">
-    <input type="submit" id="addbutton" value="Add"/>
-    <input type="submit" id="complete" value="Complete"/>
-    <input type="submit" id="findbylabelid" value="Find by Label ID"/>
+<div class="bcontainer">
+    <form action="/todos/new" method="GET">
+        <input type="submit" id="add" value="Add">
+    </form>
+    <form action="" method="POST">
+        <input type="submit" id="complete" value="Complete">
+    </form>
+    <form action="/todos/$todo.id/delete" method="POST">
+        <input type="submit" id="findbylid" value="Find by Label ID">
+    </form>
 </div>
 </html>

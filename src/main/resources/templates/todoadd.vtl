@@ -1,10 +1,15 @@
-<HTML>
-
-<form action="/todos/new" method="POST">
+<!DOCTYPE html>
+<html>
+<title>Add a ToDo!</title>
+<head>
+    <link type="text/css" rel="stylesheet" href="addstyle.css"/>
+</head>
+<div class="container">
+    <div id="titlething">Welcome to your ToDo List!</div>
+    <form action="/todos/new" method="POST">
     <input class="form" id="newtodo" name="newtodo" placeholder="New task" type="text" value="New task" />
-    <input id="task" name="task" type="submit" class="btn btn-default" value="Add" />
+    <input id="addbutton" name="task" type="submit" class="btn btn-default" value="Add" />
 </form>
+</div>
 
-</HTML>
-
-
+</html>

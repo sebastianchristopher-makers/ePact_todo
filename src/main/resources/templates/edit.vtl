@@ -1,11 +1,15 @@
 <html>
+<head>
+    <link type="text/css" rel="stylesheet" href="editstyle.css" />
+</head>
+
 <body>
 <form action="/todos/$todo.id/edit" method="POST">
     <input class="form" id="newcontent" name="newcontent" placeholder="New task" type="text" value="New content" />
     <input id="task" name="task" type="submit" class="btn btn-default" value="Submit" />
 </form>
-<form action="/todos/$todo.id/delete" method="POST">
-    <input id="task" name="task" type="submit" class="btn btn-default" value="Delete" />
-</form>
+<!--<form action="/todos/$todo.id/delete" method="POST">-->
+<!--    <input id="task" name="task" type="submit" class="btn btn-default" value="Delete" />-->
+<!--</form>-->
 </body>
 </html>
