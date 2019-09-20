@@ -54,6 +54,7 @@ public class Sql2oUserDaoTest {
         user.setId(1);
         userDao.create("Chris", "Password1234");
         User createdUser = userDao.authenticate("Chris", "Password1234");
+        System.out.println(createdUser);
         assertEquals(user, createdUser);
     }
 
