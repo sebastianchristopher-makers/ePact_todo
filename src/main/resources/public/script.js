@@ -6,10 +6,11 @@ function validateForm() {
     returnToPreviousPage();
     return false;
   }
-  if(!validUsername(username)) {
-      document.getElementById('username-length').innerHTML = 'Username must not be empty';
-      returnToPreviousPage();
-      return false;
+  debugger;
+  if(validUsername(username) == false) {
+    document.getElementById('username-length').innerHTML = 'Username must not be empty';
+    returnToPreviousPage();
+    return false;
     }
   document.forms['sign-up'].submit()
 }
