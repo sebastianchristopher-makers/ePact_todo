@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-<title>Add a ToDo!</title>
 <style>
-    #titlething {
+#titlething {
   color: #FFFFFF;
   font-size: 50px;
   text-align: center;
-  border: 5px solid #FFFFFF;
+  border: 5px solid #000000;
   margin: 0;
   padding: 10px;
 }
@@ -22,7 +19,6 @@ height:800px;
   background-color: rgba(255, 255, 255, .2);
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   user-select: none;
-  text-align: center;
 }
 #addbutton{
   width: 145;
@@ -33,19 +29,5 @@ height:800px;
   cursor:pointer;
   outline:none;
   margin-top: 15px;
-  text-align: center;
 }
-
 </style>
-<head>
-    <link type="text/css" rel="stylesheet" href="addstyle.css"/>
-</head>
-<div class="container">
-    <div id="titlething">Add a ToDo!</div>
-    <form action="/todos/new" method="POST">
-    <input class="form" id="newtodo" name="newtodo" type="text"/>
-    <input id="addbutton" name="task" type="submit" class="btn btn-default" value="Add" />
-</form>
-</div>
-
-</html>

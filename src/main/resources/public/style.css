@@ -5,7 +5,7 @@
   color: #FFFFFF;
   font-size: 50px;
   text-align: center;
-  border: 5px solid #FFFFFF;  border-radius: 5px;
+  border: 5px solid #FFFFFF;
   margin: 0;
   padding: 10px;
 }
@@ -19,11 +19,20 @@ height:800px;
 .container {
   max-width: 450px;
   margin: 0 auto;
-  border-top: 5px solid #435757;
+  border-top: 1px solid #FFFFFF;
   background-color: rgba(255, 255, 255, .2);
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   user-select: none;
 }
+/* .bcontainer {
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  user-select: none;
+  align-self: flex-end;
+} */
 .items {
   display: flex;
   flex-direction: column;
@@ -31,14 +40,14 @@ height:800px;
   counter-reset: done-items undone-items;
 }
 
-h2 {
+/* h2 {
   text-align: center;
   position: relative;
   margin: 0;
   padding: 10px 0;
   font-size: 1.2em;
-}
-
+} */
+/*
 h2::before {
   content: '';
   display: block;
@@ -69,17 +78,11 @@ h2::after {
 
 .undone::after {
   content: ' (' counter(undone-items) ')';
-}
-
+} */
+/*THIS IS THE BIT THAT IS DRIVING ME FUCKING MENTAL*/
 /* hide inputs offscreen, but at the same vertical positions as the correpsonding labels, so that tabbing scrolls the viewport as expected */
-input {
-  display: block;
-  height: 53px;
-  margin: 0 0 -53px -9999px;
-  order: 4;
-  outline: none;
-  counter-increment: undone-items;
-}
+
+
 
 input:checked {
   order: 2;
@@ -90,7 +93,9 @@ label {
   display: block;
   position: relative;
   padding: 15px 0 15px 45px;
-  border-top: 1px dashed #fff;
+  border-top: 2px solid #fff;
+  border-top: 2px solid #fff;
+
   order: 4;
   cursor: pointer;
   animation: undone .5s;
@@ -117,19 +122,22 @@ input:checked + label {
 input:checked + label::before {
   content: '\f058'; /* circle checkmark */
 }
-/* #addbutton{
-  width: 145;
-  height: 59;
-  background: #3B5998;
-  color:white;
-  font-size:18px;
+#add{
+  display: flex;
+  width: 450px;
+  background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+  color: white;
+  font-size:20px;
   cursor:pointer;
-  outline:none;
-  margin-top: 15px;
+  outline: 1px solid #FFFFFF;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+
 }
 #complete{
-  width: 150;
-  height: 59;
+  width: 150px;
+  height: 59px;
   background: #3B5998;
   color:white;
   font-size:18px;
@@ -137,13 +145,13 @@ input:checked + label::before {
   outline:none;
   margin-top: 15px;
 }
-#findbylabelid{
-  width: 145;
-  height: 59;
+#findbylid{
+  width: 145px;
+  height: 59px;
   background: #3B5998;
   color:white;
   font-size:18px;
   cursor:pointer;
   outline:none;
   margin-top: 15px;
-} */
+}

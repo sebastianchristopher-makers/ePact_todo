@@ -24,20 +24,42 @@
 #end
 <div class="container">
     <div id="titlething">Welcome to your ToDo List!</div>
+<!--    < id="add">-->
+    <form action="/todos/new" method="GET">
+            <input type="submit" id="add"  value="Add">
+        </form>
+<!--    </div>-->
     <div class="items">
 
         #foreach( $todo in $todos )
-        <input id="$todo.id" type="checkbox" checked>
-        <label for="$todo.id">$todo.content</label>
+        <div id="$todo.id">
+            #if ($todo.complete == true)
+                <label style="text-decoration:line-through" for="$todo.id">$todo.content</label>
+            #else
+                <label for="$todo.id">$todo.content</label>
+            #end
+            <p>
+        <form action="/todos/$todo.id/delete" method="POST">
+            <input type="submit" id="$todo.id" value="Delete">
+        </form>
+            <form action="/todos/$todo.id/edit" method="GET">
+                <input type="submit" id="$todo.id" value="Edit">
+            </form>
+            <form action="/todos/$todo.id/complete" method="POST">
+                <input type="submit" id="$todo.id" value="Complete">
+            </form>
+        </p>
         #end
 
-        <h2 class="done" aria-hidden="true">Done</h2>
-        <h2 class="undone" aria-hidden="true">Not Done</h2>
+<!--        <h2 class="done" aria-hidden="true">Done</h2>-->
+<!--        <h2 class="undone" aria-hidden="true">Not Done</h2>-->
+        </div>
     </div>
-</div>
-<div class="buttons" id="buttons">
-    <input type="submit" id="addbutton" value="Add"/>
-    <input type="submit" id="complete" value="Complete"/>
-    <input type="submit" id="findbylabelid" value="Find by Label ID"/>
+
+
+
+<!--    <form action="/todos/$todo.id/delete" method="POST">-->
+<!--        <input type="submit" id="findbylid" value="Find by Label ID">-->
+<!--    </form>-->
 </div>
 </html>
