@@ -3,7 +3,9 @@ import java.util.List;
 import java.util.Map;
 
 import dao.Sql2oToDoDao;
+import dao.Sql2oUserDao;
 import models.ToDo;
+import models.User;
 import org.slf4j.Logger;
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
@@ -18,11 +20,13 @@ public class App {
         String connectionString = "jdbc:postgresql://localhost:5432/epacttodoapp";
         Sql2o sql2o = new Sql2o(connectionString, "student", "");
         Sql2oToDoDao todoDao = new Sql2oToDoDao(sql2o);
+        Sql2oUserDao userDao = new Sql2oUserDao(sql2o);
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>(); // allows us to pass objects into the vtl template
             List<ToDo> todos = todoDao.all();
             model.put("todos", todos); // pass all ToDos into template
+            model.put("user", req.session().attribute("user"));
             return new ModelAndView(model, "index.vtl");
         }, new VelocityTemplateEngine());
 
@@ -84,6 +88,36 @@ public class App {
             String newContent = request.queryParams("newcontent");
             todoDao.edit(id, newContent);
             response.redirect("/");
+            return null;
+        });
+
+        get("/sessions/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "templates/sessions/new.vtl");
+        }, new spark.template.velocity.VelocityTemplateEngine());
+
+        get("/users/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            return new ModelAndView(model, "templates/users/new.vtl");
+        }, new spark.template.velocity.VelocityTemplateEngine());
+
+        post("/users", (req, res) -> {
+            String username = req.queryParams("username");
+            String password = req.queryParams("password");
+            User user = userDao.create(username, password);
+            req.session().attribute("user", user);
+            res.redirect("/");
+            return null;
+        });
+
+        post ("/sessions", (req, res) -> {
+            String username = req.queryParams("username");
+            String password = req.queryParams("password");
+            User user = userDao.authenticate(username, password);
+            if(user != null){
+                req.session().attribute("user", user);
+            }
+            res.redirect("/");
             return null;
         });
     }
