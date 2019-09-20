@@ -6,7 +6,6 @@ import dao.Sql2oToDoDao;
 import dao.Sql2oUserDao;
 import models.ToDo;
 import models.User;
-import org.slf4j.Logger;
 import org.sql2o.Sql2o;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
@@ -31,17 +30,20 @@ public class App {
             }
             model.put("todos", todos); // pass all ToDos into template
             model.put("user", user);
-            return new ModelAndView(model, "index.vtl");
+            return new ModelAndView(model, "templates/index.vtl");
         }, new VelocityTemplateEngine());
 
         get("/todos/new", (request,response)->{
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "templates/todoadd.vtl");
+            User user = request.session().attribute("user");
+            model.put("user", user);
+            return new ModelAndView(model, "templates/todos/todoadd.vtl");
         }, new VelocityTemplateEngine());
 
         post("/todos/new", (request,response) -> {
-            String newToDo = request.queryParams("newtodo");
-            ToDo toDo = new ToDo(newToDo, 1);
+            String content = request.queryParams("content");
+            int id = Integer.parseInt(request.queryParams("id"));
+            ToDo toDo = new ToDo(content, id);
             todoDao.add(toDo);
             response.redirect("/");
             return null;
@@ -59,7 +61,7 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             int id = Integer.parseInt(request.params(":id"));
             Boolean iscomplete = true;
-            todoDao.complete(id,iscomplete);
+            todoDao.complete(id, iscomplete);
 //            model.put("complete",)
             response.redirect("/");
             return null;
@@ -70,12 +72,12 @@ public class App {
             int id = Integer.parseInt(request.params(":id"));
             ToDo todo = todoDao.find(id);
             model.put("todo", todo);
-            return new ModelAndView(model, "templates/edit.vtl");
+            return new ModelAndView(model, "templates/todos/edit.vtl");
         }, new VelocityTemplateEngine());
 
         post("/todos/:id/edit", (request,response) -> {
             int id = Integer.parseInt(request.params(":id"));
-            String newContent = request.queryParams("newcontent");
+            String newContent = request.queryParams("content");
             todoDao.edit(id, newContent);
             response.redirect("/");
             return null;

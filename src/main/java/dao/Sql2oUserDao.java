@@ -60,9 +60,7 @@ public class Sql2oUserDao implements UserDao {
                     .addParameter("name", username)
                     .executeAndFetchTable()
                     .rows();
-            System.out.println(1);
             int id = pass.get(0).getInteger("id");
-            System.out.println(2);
             String hashPassword = pass.get(0).getString("password");
             if(BCrypt.checkpw(password, hashPassword)) {
                 return con.createQuery("SELECT id, name FROM users WHERE id = :id")

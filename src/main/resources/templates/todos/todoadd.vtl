@@ -38,12 +38,13 @@ height:800px;
 
 </style>
 <head>
-    <link type="text/css" rel="stylesheet" href="addstyle.css"/>
+    <link type="text/css" rel="stylesheet" href="../addstyle.css"/>
 </head>
 <div class="container">
     <div id="titlething">Add a ToDo!</div>
     <form action="/todos/new" method="POST">
-    <input class="form" id="newtodo" name="newtodo" type="text"/>
+    <input class="form" id="newtodo" name="content" type="text"/>
+    <input type="hidden" name="id" value="$user.id">
     <input id="addbutton" name="task" type="submit" class="btn btn-default" value="Add" />
 </form>
 </div>

@@ -1,11 +1,11 @@
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="editstyle.css" />
+    <link type="text/css" rel="stylesheet" href="../style.css" />
 </head>
 
 <body>
 <form action="/todos/$todo.id/edit" method="POST">
-    <input class="form" id="newcontent" name="newcontent" placeholder="New task" type="text" value="New content" />
+    <input class="form" id="newcontent" name="content" value="$todo.content" type="text"/>
     <input id="task" name="task" type="submit" class="btn btn-default" value="Submit" />
 </form>
 </body>
