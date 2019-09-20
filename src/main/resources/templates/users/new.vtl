@@ -9,10 +9,14 @@
 <body>
 <h1>New user sign-up</h1>
 <form name='sign-up' action='/users' method='POST' onsubmit='event.preventDefault(); return validateForm();'>
-  Username: <input type='text' name='username' maxlength='60' value=''><br>
+  Username: <input type='text' name='username' id="username" maxlength='60' value=''><br>
   Password: <input type='password' name='password' id='password' value=''>
   <input type='submit' value='Register'>
 </form>
 <p class='notices' id='password-length'></p>
+<p class='notices' id='username-length'></p>
+#if($userexists)
+  <p class="notices">$userexists</p>
+#end
 </body>
 </html>

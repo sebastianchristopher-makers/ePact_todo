@@ -88,12 +88,20 @@ public class App {
 
         get("/users/new", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
+            String notices = req.session().attribute("userexists");
+            model.put("userexists", notices);
             return new ModelAndView(model, "templates/users/new.vtl");
         }, new spark.template.velocity.VelocityTemplateEngine());
 
         post("/users", (req, res) -> {
             String username = req.queryParams("username");
             String password = req.queryParams("password");
+            req.session().removeAttribute("userexists");
+            if(userDao.userExists(username)){
+                req.session().attribute("userexists", "User already exists!");
+                res.redirect("/users/new");
+                halt();
+            }
             User user = userDao.create(username, password);
             req.session().attribute("user", user);
             res.redirect("/");
