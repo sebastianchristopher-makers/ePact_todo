@@ -40,7 +40,7 @@ height:800px;
 label {
   display: block;
   position: relative;
-  padding: 15px 0 15px 45px;
+  padding: 15px 0 15px 15px;
   border-top: 2px solid #fff;
   border-top: 2px solid #fff;
 
@@ -50,7 +50,6 @@ label {
 }
 
 label::before {
-  content: '\f10c'; /* circle outline */
   display: block;
   position: absolute;
   top: 11px;
