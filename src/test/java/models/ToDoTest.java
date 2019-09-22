@@ -12,7 +12,7 @@ public class ToDoTest {
 
     @Before
     public void setUp() {
-       toDo = new ToDo("Buy Milk", 1);
+       toDo = new ToDo("Buy Milk", 1, 1);
     }
 
     @Test
@@ -60,11 +60,11 @@ public class ToDoTest {
         assertEquals(0 ,toDo.getLabelId());
     }
 
-    @Test
-    public void canSetLabelId() {
-        toDo.setLabelId(1);
-        assertEquals(1, toDo.getLabelId());
-    }
+//    @Test
+//    public void canSetLabelId() {
+//        toDo.setLabelId(1);
+//        assertEquals(1, toDo.getLabelId());
+//    }
 //    @Test
 //    public void defaultUserIdIs0() {
 //        assertEquals(0 ,toDo.getUserId());

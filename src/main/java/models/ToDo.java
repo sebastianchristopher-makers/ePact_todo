@@ -11,7 +11,7 @@ public class ToDo {
     private int labelId;
     private int userId;
 
-    public ToDo(String content, int userId){
+    public ToDo(String content, int userId, int labelId){
         this.content = content;
         this.userId = userId;
     }
