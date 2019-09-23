@@ -151,6 +151,17 @@ public class App {
             res.redirect("/");
             return null;
         });
+
+        get("/labels/:id/todos", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            int labelId = Integer.parseInt(req.params("id"));
+            User user = req.session().attribute("user");
+            List<ToDo> todos = todoDao.findByLabelAndUser(labelId, user.getId());
+            model.put("todos", todos);
+            model.put("labelDao", labelDao);
+            model.put("label", labelDao.find(labelId).getName());
+            return new ModelAndView(model, "templates/labels/index.vtl");
+        }, new spark.template.velocity.VelocityTemplateEngine());
     }
 }
 

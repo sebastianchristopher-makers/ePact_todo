@@ -35,6 +35,7 @@
           <div class="items">
           #foreach( $todo in $todos )
             <div id="$todo.id">
+              #set($labelRoute = "/labels/" + $todo.labelId + "/todos")
               #if ($todo.complete == true)
                 <label style="text-decoration:line-through" for="$todo.id">$todo.content</label>
               #else
