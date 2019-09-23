@@ -21,7 +21,7 @@ public class Sql2oToDoDaoTest {
 
     @Before
     public void setUp(){
-        todo = new ToDo("Pet Milk", 1);
+        todo = new ToDo("Pet Milk", 1, 1);
         String connectionString = "jdbc:postgresql://localhost:5432/epacttodoapptest";
         Sql2o sql2o = new Sql2o(connectionString, "student", "");
         todoDao = new Sql2oToDoDao(sql2o);
@@ -51,9 +51,9 @@ public class Sql2oToDoDaoTest {
 
     @Test
     public void allReturnsAllToDos() {
-        ToDo toDo1 = new ToDo("Buy bread", 1);
+        ToDo toDo1 = new ToDo("Buy bread", 1, 1);
         toDo1.setId(1);
-        ToDo toDo2 = new ToDo("Buy milk", 1);
+        ToDo toDo2 = new ToDo("Buy milk", 1, 1);
         toDo2.setId(2);
         todoDao.add(toDo1);
         todoDao.add(toDo2);
@@ -74,7 +74,7 @@ public class Sql2oToDoDaoTest {
         conn.createQuery("INSERT INTO todo(content) VALUES (:content)")
                 .addParameter("content", "Buy bread")
                 .executeUpdate();
-        ToDo toDo = new ToDo("Buy bread!", 1);
+        ToDo toDo = new ToDo("Buy bread!", 1, 1);
         toDo.setId(1);
         todoDao.delete(1);
     }
@@ -115,9 +115,9 @@ public class Sql2oToDoDaoTest {
         conn.createQuery(sql)
                 .addParameter("name", "UserTwo")
                 .executeUpdate();
-        ToDo twoDo = new ToDo("foo", 1);
-        ToDo threeDo = new ToDo("bar", 2);
-        ToDo fourDo = new ToDo("four", 1);
+        ToDo twoDo = new ToDo("foo", 1, 1);
+        ToDo threeDo = new ToDo("bar", 2, 1);
+        ToDo fourDo = new ToDo("four", 1, 1);
         todoDao.add(twoDo);
         todoDao.add(threeDo);
         todoDao.add(fourDo);

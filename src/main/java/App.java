@@ -2,9 +2,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import dao.Sql2oLabelDao;
 import dao.Sql2oToDoDao;
 import dao.Sql2oUserDao;
 import dao.ToDoDao;
+import models.Label;
 import models.ToDo;
 import models.User;
 import org.sql2o.Sql2o;
@@ -21,6 +23,7 @@ public class App {
         Sql2o sql2o = new Sql2o(connectionString, "student", "");
         Sql2oToDoDao todoDao = new Sql2oToDoDao(sql2o);
         Sql2oUserDao userDao = new Sql2oUserDao(sql2o);
+        Sql2oLabelDao labelDao = new Sql2oLabelDao(sql2o);
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>(); // allows us to pass objects into the vtl template
@@ -31,6 +34,9 @@ public class App {
             }
             model.put("todos", todos); // pass all ToDos into template
             model.put("user", user);
+            List<Label> labels = labelDao.all();
+            model.put("labels", labels);
+            model.put("labelDao", labelDao);
             return new ModelAndView(model, "templates/index.vtl");
         }, new VelocityTemplateEngine());
 
@@ -44,7 +50,7 @@ public class App {
         post("/todos/new", (request,response) -> {
             String content = request.queryParams("content");
             int id = Integer.parseInt(request.queryParams("id"));
-            ToDo toDo = new ToDo(content, id);
+            ToDo toDo = new ToDo(content, id, 1);
             todoDao.add(toDo);
             response.redirect("/");
             return null;
@@ -59,7 +65,6 @@ public class App {
         });
 
         post("/todos/:id/complete", (request,response) -> {
-//            Map<String, Object> model = new HashMap<>();
             int id = Integer.parseInt(request.params(":id"));
             ToDo todo = todoDao.find(id);
             if (todo.getComplete() == true) {
@@ -69,7 +74,6 @@ public class App {
                 Boolean iscomplete = true;
                 todoDao.complete(id, iscomplete);
             }
-//            model.put("complete",)
                 response.redirect("/");
                 return null;
         });
@@ -130,6 +134,20 @@ public class App {
 
         post("/sessions/destroy", (req, res) -> {
             req.session().removeAttribute("user");
+            res.redirect("/");
+            return null;
+        });
+
+        get ("/labels/new", (req, res) -> {
+            Map<String, Object> model = new HashMap<>();
+            model.put("labels", labelDao.all());
+            return new ModelAndView(model, "templates/new-label.vtl");
+        }, new spark.template.velocity.VelocityTemplateEngine());
+
+        post("/labels", (req, res) -> {
+            String name = req.queryParams("name");
+            Label label = new Label(name);
+            labelDao.add(label);
             res.redirect("/");
             return null;
         });
