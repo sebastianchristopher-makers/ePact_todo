@@ -6,17 +6,54 @@
   <link href='../style.css' rel='stylesheet' type='text/css'>
   <script src="../script.js"></script>
 </head>
+<style>
+    #titlething {
+  color: #FFFFFF;
+  font-size: 50px;
+  text-align: center;
+  border: 5px solid #FFFFFF;
+  margin: 0;
+  padding: 10px;
+}
+body{
+background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+height:800px;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: : 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  user-select: none;
+  text-align: center;
+}
+#register{
+  width: 100;
+  height: 30;
+  background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  outline:none;
+  margin-top: 15px;
+  text-align: center;
+}
+</style>
 <body>
-<h1>New user sign-up</h1>
+<div class="container">
+<div id="titlething">Please Sign Up!</div>
 <form name='sign-up' action='/users' method='POST' onsubmit='event.preventDefault(); return validateForm();'>
-  Username: <input type='text' name='username' id="username" maxlength='60' value=''><br>
+  Username: <input type='text' name='username' id="username" maxlength='60' value=''>
   Password: <input type='password' name='password' id='password' value=''>
-  <input type='submit' value='Register'>
+  <input type='submit' value='Register' id="register">
 </form>
 <p class='notices' id='password-length'></p>
 <p class='notices' id='username-length'></p>
 #if($userexists)
   <p class="notices">$userexists</p>
 #end
+</div>
 </body>
 </html>

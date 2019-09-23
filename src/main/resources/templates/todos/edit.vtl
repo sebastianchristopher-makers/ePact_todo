@@ -1,12 +1,47 @@
 <html>
-<head>
-    <link type="text/css" rel="stylesheet" href="../style.css" />
-</head>
+<Title>Edit your ToDo!</Title>
+<style>
+    #titlething {
+  color: #FFFFFF;
+  font-size: 50px;
+  text-align: center;
+  border: 5px solid #FFFFFF;
+  margin: 0;
+  padding: 10px;
+}
+body{
+background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+height:800px;
+}
 
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: : 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  user-select: none;
+  text-align: center;
+}
+#editbutton{
+  width: 100;
+  height: 30;
+  background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  outline:none;
+  margin-top: 15px;
+  text-align: center;
+}
+</style>
 <body>
+<div class="container">
+<div id="titlething">Edit a ToDo!</div>
 <form action="/todos/$todo.id/edit" method="POST">
     <input class="form" id="newcontent" name="content" value="$todo.content" type="text"/>
-    <input id="task" name="task" type="submit" class="btn btn-default" value="Submit" />
+    <input id="editbutton" name="task" type="submit" class="btn btn-default" value="Submit" />
 </form>
+</div>
 </body>
 </html>

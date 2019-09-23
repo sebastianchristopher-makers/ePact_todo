@@ -23,7 +23,7 @@ height:800px;
 #addbutton{
   width: 145;
   height: 59;
-  background: #3B5998;
+background-image:linear-gradient(240DEG, #3B5998, #add8e6);
   color:white;
   font-size:18px;
   cursor:pointer;
