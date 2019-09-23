@@ -11,6 +11,7 @@ function validateForm() {
 //      returnToPreviousPage();
 //      return false;
 //    }
+//THIS BIT IS BROKEN
   document.forms['sign-up'].submit()
 }
 
