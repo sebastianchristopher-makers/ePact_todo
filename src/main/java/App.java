@@ -34,23 +34,28 @@ public class App {
             }
             model.put("todos", todos); // pass all ToDos into template
             model.put("user", user);
-            List<Label> labels = labelDao.all();
-            model.put("labels", labels);
+//            List<Label> labels = labelDao.all();
+//            model.put("labels", labels);
             model.put("labelDao", labelDao);
+
             return new ModelAndView(model, "templates/index.vtl");
         }, new VelocityTemplateEngine());
 
         get("/todos/new", (request,response)->{
             Map<String, Object> model = new HashMap<>();
             User user = request.session().attribute("user");
+            List<Label> labels = labelDao.all();
             model.put("user", user);
+            model.put("labels", labels);
             return new ModelAndView(model, "templates/todos/todoadd.vtl");
         }, new VelocityTemplateEngine());
 
         post("/todos/new", (request,response) -> {
             String content = request.queryParams("content");
-            int id = Integer.parseInt(request.queryParams("id"));
-            ToDo toDo = new ToDo(content, id, 1);
+            System.out.println(request.queryParams("labels"));
+            int userid = Integer.parseInt(request.queryParams("userid"));
+            int labelid = Integer.parseInt(request.queryParams("labels"));
+            ToDo toDo = new ToDo(content,userid,labelid);
             todoDao.add(toDo);
             response.redirect("/");
             return null;

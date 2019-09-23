@@ -111,10 +111,7 @@ public class Sql2oLabelDaoTest {
 
     @After
     public void tearDown() throws Exception {
-        String sql = "TRUNCATE label CASCADE;";
-        conn.createQuery(sql).executeUpdate();
-        sql = "ALTER SEQUENCE label_id_seq RESTART WITH 1;";
-        conn.createQuery(sql).executeUpdate();
+        conn.createQuery("TRUNCATE label RESTART IDENTITY CASCADE").executeUpdate();
         conn.createQuery("INSERT INTO label (name) VALUES (:none)")
                 .addParameter("none", "(none)")
                 .executeUpdate();
