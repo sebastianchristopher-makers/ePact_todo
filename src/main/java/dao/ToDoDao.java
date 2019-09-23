@@ -3,8 +3,7 @@ package dao;
 import models.ToDo;
 import java.util.List;
 
-public interface ToDoDao {
-
+public interface ToDoDao{
     //add
     void add(ToDo todo);
 

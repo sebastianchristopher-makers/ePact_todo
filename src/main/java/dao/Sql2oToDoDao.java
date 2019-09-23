@@ -91,7 +91,7 @@ public class Sql2oToDoDao implements ToDoDao {
     @Override
     public List<ToDo> findByUser(int userId) {
         try(Connection con = sql2o.open()){
-            return con.createQuery("SELECT * FROM todo WHERE userId = :userId")
+            return con.createQuery("SELECT * FROM todo WHERE userId = :userId ORDER BY complete ASC, id ASC")
                     .addParameter("userId", userId)
                     .executeAndFetch(ToDo.class);
         } catch(Sql2oException ex) {
