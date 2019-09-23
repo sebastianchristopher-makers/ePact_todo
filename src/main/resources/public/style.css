@@ -9,6 +9,11 @@
   margin: 0;
   padding: 10px;
 }
+.contentbuttons{
+  display: inline;
+  text-align: center;
+
+}
 body{
 background-image:linear-gradient(240DEG, #3B5998, #add8e6);
 height:800px;
@@ -24,15 +29,7 @@ height:800px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .1);
   user-select: none;
 }
-/* .bcontainer {
-  max-width: 450px;
-  margin: 0 auto;
-  border-top: 1px solid #FFFFFF;
-  background-color: rgba(255, 255, 255, .2);
-  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-  user-select: none;
-  align-self: flex-end;
-} */
+
 .items {
   display: flex;
   flex-direction: column;
@@ -40,59 +37,10 @@ height:800px;
   counter-reset: done-items undone-items;
 }
 
-/* h2 {
-  text-align: center;
-  position: relative;
-  margin: 0;
-  padding: 10px 0;
-  font-size: 1.2em;
-} */
-/*
-h2::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: -20px;
-  width: 5px;
-  background-color: #435757;
-}
-
-h2::after {
-  display: block;
-  float: right;
-  font-weight: normal;
-}
-.done {
-  order: 1;
-}
-
-.done::after {
-  content: ' (' counter(done-items) ')';
-}
-
-.undone {
-  order: 3;
-}
-
-.undone::after {
-  content: ' (' counter(undone-items) ')';
-} */
-/*THIS IS THE BIT THAT IS DRIVING ME FUCKING MENTAL*/
-/* hide inputs offscreen, but at the same vertical positions as the correpsonding labels, so that tabbing scrolls the viewport as expected */
-
-
-
-input:checked {
-  order: 2;
-  counter-increment: done-items;
-}
-
 label {
   display: block;
   position: relative;
-  padding: 15px 0 15px 45px;
+  padding: 15px 0 15px 15px;
   border-top: 2px solid #fff;
   border-top: 2px solid #fff;
 
@@ -102,7 +50,6 @@ label {
 }
 
 label::before {
-  content: '\f10c'; /* circle outline */
   display: block;
   position: absolute;
   top: 11px;
@@ -135,7 +82,7 @@ input:checked + label::before {
   text-align: center;
 
 }
-#complete{
+/* #complete{
   width: 150px;
   height: 59px;
   background: #3B5998;
@@ -144,8 +91,8 @@ input:checked + label::before {
   cursor:pointer;
   outline:none;
   margin-top: 15px;
-}
-#findbylid{
+} */
+/* #findbylid{
   width: 145px;
   height: 59px;
   background: #3B5998;
@@ -154,4 +101,4 @@ input:checked + label::before {
   cursor:pointer;
   outline:none;
   margin-top: 15px;
-}
+} */
