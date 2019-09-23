@@ -4,6 +4,7 @@ import java.util.Map;
 
 import dao.Sql2oToDoDao;
 import dao.Sql2oUserDao;
+import dao.ToDoDao;
 import models.ToDo;
 import models.User;
 import org.sql2o.Sql2o;
@@ -58,13 +59,19 @@ public class App {
         });
 
         post("/todos/:id/complete", (request,response) -> {
-            Map<String, Object> model = new HashMap<>();
+//            Map<String, Object> model = new HashMap<>();
             int id = Integer.parseInt(request.params(":id"));
-            Boolean iscomplete = true;
-            todoDao.complete(id, iscomplete);
+            ToDo todo = todoDao.find(id);
+            if (todo.getComplete() == true) {
+                Boolean iscomplete = false;
+                todoDao.complete(id, iscomplete);
+            } else {
+                Boolean iscomplete = true;
+                todoDao.complete(id, iscomplete);
+            }
 //            model.put("complete",)
-            response.redirect("/");
-            return null;
+                response.redirect("/");
+                return null;
         });
 
         get("/todos/:id/edit", (request,response) -> {
