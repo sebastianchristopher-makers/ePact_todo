@@ -36,7 +36,7 @@
               #if ($todo.complete == true)
                 <label style="text-decoration:line-through" for="$todo.id">$todo.content</label>
               #else
-                <label for="$todo.id">$todo.content</label>
+                <label for="$todo.id">$todo.content $label.name</label>
               #end
               <div class="contentbuttons">
                 <form action="/todos/$todo.id/delete" method="POST" class="contentbuttons">

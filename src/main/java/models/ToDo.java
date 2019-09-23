@@ -14,6 +14,7 @@ public class ToDo {
     public ToDo(String content, int userId, int labelId){
         this.content = content;
         this.userId = userId;
+        this.labelId = labelId;
     }
 
     public void setId(int id){
