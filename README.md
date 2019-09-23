@@ -19,5 +19,14 @@ ADD CONSTRAINT constraint_fk
 FOREIGN KEY (userId)
 REFERENCES users(id)
 ON DELETE CASCADE;
-
+```
+```
+CREATE TABLE label(id SERIAL PRIMARY KEY, name VARCHAR(20));
+```
+```
+ALTER TABLE todo
+ADD CONSTRAINT constraint_fk
+FOREIGN KEY (labelId)
+REFERENCES label(id)
+ON DELETE CASCADE;
 ```

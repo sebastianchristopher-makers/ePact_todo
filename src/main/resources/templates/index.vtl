@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+/*
+*/
 <html>
   <title>List of ToDos</title>
   <head>
@@ -46,7 +48,11 @@
                   <button class ="edit" type="submit" id="$todo.id" value="Edit" style="background-image:linear-gradient(240DEG, #3B5998, #add8e6); color: white;   outline: 1px solid #FFFFFF;"><i class = "material-icons"> edit </i> </button>
                 </form>
                 <form action="/todos/$todo.id/complete" method="POST" class="contentbuttons">
+                  #if ($todo.complete == false)
                   <button class = "complete " type="submit" id="$todo.id" value="Complete" style="background-image:linear-gradient(240DEG, #3B5998, #add8e6); color: white;   outline: 1px solid #FFFFFF;"><i class = "material-icons"> done_outline</i></button>
+                  #else
+                  <button class = "complete " type="submit" id="$todo.id" value="Complete" style="background-image:linear-gradient(240DEG, #3B5998, #add8e6); color: white;   outline: 1px solid #FFFFFF;"><i class = "material-icons"> undo</i></button>
+                  #end
                 </form>
                 </div>
               #end
@@ -57,6 +63,5 @@
           </form>
         #end
       </div>
-    </div>
   </body>
 </html>
