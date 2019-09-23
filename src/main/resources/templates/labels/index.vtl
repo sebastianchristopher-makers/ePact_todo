@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Labels Index</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!--It's useful to put a comment at the top of your vtl file to help you keep track of what is what when things get more complex.-->
+<h1 style="text-align:center">$label</h1>
+#if (!$todos.isEmpty())
+<ul>
+  #foreach( $todo in $todos )
+  #set($labelId = $todo.labelId)
+  #set($label = $labelDao.find($labelId))
+  #set($labelName = $label.getName())
+  #set($todoRoute = "/todos/" + $todo.id + "/edit")
+  <li><a href=$todoRoute>$todo.content</a> $labelName</li>
+  #end
+</ul>
+#else
+<p>Nothing to do!</p>
+#end
+#if (!$todos.isEmpty())
+<form style="text-align:center" action="/todos/delete" method="GET">
+  <input type="Submit" value="Delete all">
+</form>
+#end
+</body>
+</html>

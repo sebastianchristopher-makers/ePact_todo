@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-/*
-*/
 <html>
   <title>List of ToDos</title>
   <head>
@@ -38,10 +36,11 @@
           <div class="items">
           #foreach( $todo in $todos )
             <div id="$todo.id">
+              #set($labelRoute = "/labels/" + $todo.labelId + "/todos")
               #if ($todo.complete == true)
-              <label style="text-decoration:line-through" for="$todo.id">$todo.content <span style="color: #00FF00"> $labelDao.find($todo.labelId).name</span></label>
+              <label style="text-decoration:line-through" for="$todo.id">$todo.content <a href=$labelRoute style="color: #00FF00">$labelDao.find($todo.labelId).name</a></label>
               #else
-                <label for="$todo.id">$todo.content <span style="color: #00FF00"> $labelDao.find($todo.labelId).name</span></label>
+                <label for="$todo.id">$todo.content <a href=$labelRoute style="color: #00FF00">$labelDao.find($todo.labelId).name</a></label>
               #end
               <div class="contentbuttons">
                 <form action="/todos/$todo.id/delete" method="POST" class="contentbuttons">
