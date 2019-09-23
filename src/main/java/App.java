@@ -34,9 +34,10 @@ public class App {
             }
             model.put("todos", todos); // pass all ToDos into template
             model.put("user", user);
-            List<Label> labels = labelDao.all();
-            model.put("labels", labels);
+//            List<Label> labels = labelDao.all();
+//            model.put("labels", labels);
             model.put("labelDao", labelDao);
+
             return new ModelAndView(model, "templates/index.vtl");
         }, new VelocityTemplateEngine());
 

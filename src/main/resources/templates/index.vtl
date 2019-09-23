@@ -32,13 +32,16 @@
           <form action="/todos/new" method="GET">
             <input type="submit" id="add"  value="Add">
           </form>
+          <form action="/labels/new" method="GET">
+            <input type="submit" id="add" value="New Label">
+          </form>
           <div class="items">
           #foreach( $todo in $todos )
             <div id="$todo.id">
               #if ($todo.complete == true)
-                <label style="text-decoration:line-through" for="$todo.id">$todo.content</label>
+              <label style="text-decoration:line-through" for="$todo.id">$todo.content <span style="color: #00FF00"> $labelDao.find($todo.labelId).name</span></label>
               #else
-                <label for="$todo.id">$todo.content $label.name</label>
+                <label for="$todo.id">$todo.content <span style="color: #00FF00"> $labelDao.find($todo.labelId).name</span></label>
               #end
               <div class="contentbuttons">
                 <form action="/todos/$todo.id/delete" method="POST" class="contentbuttons">
@@ -57,10 +60,9 @@
                 </div>
               #end
             </div>
+
           </div>
-          <form action="/labels/new" method="GET">
-            <input type="submit" id="add" value="Add a label">
-          </form>
+
         #end
       </div>
   </body>
