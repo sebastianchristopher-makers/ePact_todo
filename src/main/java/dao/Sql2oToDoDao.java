@@ -100,4 +100,16 @@ public class Sql2oToDoDao implements ToDoDao {
         return Collections.emptyList();
     }
 
+    @Override
+    public List<ToDo> findByLabel(int labelId){
+        try(Connection con = sql2o.open()){
+            return con.createQuery("SELECT * FROM todo WHERE labelId = :labelId")
+                    .addParameter("labelId", labelId)
+                    .executeAndFetch(ToDo.class); //fetch a list
+        } catch(Sql2oException ex) {
+            System.out.println(ex);
+        }
+        return Collections.emptyList();
+    }
+
 }

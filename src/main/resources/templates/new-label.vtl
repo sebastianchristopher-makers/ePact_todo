@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+    <link type="text/css" rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!--It's useful to put a comment at the top of your vtl file to help you keep track of what is what when things get more complex.-->
+    <h1 style="text-align:center">Labels</h1>
+    <ul>
+      #foreach( $label in $labels )
+        <li>$label.name</li>
+      #end
+    </ul>
+      <form style="text-align:center" action="/labels" method="POST">
+        <label for="name">Add a new label:</label>
+        <input type="text" id="name" name="name"><br>
+        <input type="Submit" value="Add new label">
+      </form>
+  </body>
+</html>
