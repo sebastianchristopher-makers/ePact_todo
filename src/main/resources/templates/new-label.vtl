@@ -2,20 +2,59 @@
 <html>
   <head>
     <title>Index</title>
-    <link type="text/css" rel="stylesheet" href="../style.css" />
+<!--    <link type="text/css" rel="stylesheet" href="../style.css" />-->
   </head>
+  <style>
+    #titlething {
+  color: #FFFFFF;
+  font-size: 50px;
+  text-align: center;
+  border: 5px solid #FFFFFF;
+  margin: 0;
+  padding: 10px;
+}
+body{
+background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+height:800px;
+}
+
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  border-top: : 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, .2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  user-select: none;
+  text-align: center;
+}
+#addnew{
+  width: 100;
+  height: 30;
+  background-image:linear-gradient(240DEG, #3B5998, #add8e6);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  outline:none;
+  margin-top: 15px;
+  text-align: center;
+}
+</style>
+
   <body>
     <!--It's useful to put a comment at the top of your vtl file to help you keep track of what is what when things get more complex.-->
-    <h1 style="text-align:center">Labels</h1>
+    <div class="container">
+    <h1 id="titlething">Labels</h1>
     <ul>
+      <h1 style="color: white; text-align: center;">Current Labels</h1>
       #foreach( $label in $labels )
-        <li>$label.name</li>
+        <li style="color:white;">$label.name</li>
       #end
     </ul>
-      <form style="text-align:center" action="/labels" method="POST">
+      <form action="/labels" method="POST">
         <label for="name">Add a new label:</label>
         <input type="text" id="name" name="name"><br>
-        <input type="Submit" value="Add new label">
+        <input type="Submit" value="Add new label" id="addnew">
       </form>
+    </div>
   </body>
 </html>
